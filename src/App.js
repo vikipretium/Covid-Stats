@@ -13,11 +13,11 @@ function App() {
         <Route path="/countries/:countryName" element={<CountryPage />} />
         <Route
           path="*"
-          element={
+          element={(
             <main className="p-4 grow">
               <p>Not exist!</p>
             </main>
-          }
+          )}
         />
       </Routes>
       <Footer />
