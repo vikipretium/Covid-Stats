@@ -3,6 +3,7 @@ const baseUrl = 'https://mapsvg.com/static/maps/geo-calibrated';
 export const normalizeName = (name) => {
   if (name === 'us') return 'usa';
   if (name === 'brunei') return 'brunei-darussalam';
+  if (name === 'korea,_south') return 'south-korea';
   let result = name;
   result = result.replaceAll('_', '-').replaceAll('*', '');
   if (result === 'bosnia-and-herzegovina') return 'bosnia-herzegovina-2';
