@@ -14,8 +14,11 @@ export const fetchDataSuccess = (data) => ({
   },
 });
 
-export const fetchDataFailure = () => ({
+export const fetchDataFailure = (err = '') => ({
   type: FETCH_DATA_FAILURE,
+  payload: {
+    err,
+  },
 });
 
 export const resetRegionsState = () => ({
@@ -48,8 +51,6 @@ export const fetchAllData = (countryName) => (dispatch) => {
         });
       });
 
-      // Only keep data from countries with stat
-      data = data.filter((d) => d.stat > 0);
       // sort based on stat in reverse order
       data = data.sort((a, b) => b.stat - a.stat);
       dispatch(fetchDataSuccess(data));
