@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/SpaceTraveler-violet)
 
-# Covid ScoreBoard
+# Covid Stats
 
 ![screenshot](./src/images/Screenshot.png)
 
@@ -47,9 +47,9 @@ To get a local copy up and running follow these simple example steps.
 #### Clone this repository
 
 ```bash
-git clone git@github.com:vikipretium/CovidScoreBoard.git
+git clone git@github.com:vikipretium/Covid-Stats.git
 
-cd CovidScoreBoard
+cd Covid-Stats
 ```
 
 #### Run project
@@ -78,9 +78,9 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Maps are used from [MapSVG](https://mapsvg.com), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+- Design is inspired from a design made by [Nelson Sakwa](<https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)>).
+- Linters are made by [Microverse Inc](https://github.com/microverseinc/linters-config/).
 
 ## 📝 License
 
