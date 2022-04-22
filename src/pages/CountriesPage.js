@@ -19,7 +19,7 @@ function AllCountries() {
         />
         <h2 className="z-10 text-center text-3xl">World Covid-19 Cases</h2>
       </div>
-      <div className="bg-pink-500 grow rounded-3xl border border-pink-600">
+      <div className="bg-pink-500 grow rounded-xl border border-pink-600">
         <div className="p-2 text-center uppercase font-bold">
           Cases of Countries
         </div>

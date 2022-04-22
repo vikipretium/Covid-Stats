@@ -9,7 +9,7 @@ function CountryTile({ data }) {
   return (
     <Link
       to={`/countries/${id}`}
-      className="flex flex-col justify-end aspect-square bg-pink-600 hover:shadow hover:-translate-y-1 p-2 text-right m-2 relative"
+      className="flex flex-col justify-end aspect-square bg-pink-600 hover:shadow p-2 text-right m-0.5 relative "
     >
       <div
         className="absolute inset-2 bottom-8 z-0 opacity-20"
