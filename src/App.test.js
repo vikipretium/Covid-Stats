@@ -6,46 +6,44 @@ import App from './App';
 
 const todayDate = new Date().toISOString().split('T')[0];
 
-global.fetch = () =>
-  Promise.resolve({
-    json: () =>
-      Promise.resolve({
-        dates: {
-          [todayDate]: {
-            countries: {
-              France: {
+global.fetch = () => Promise.resolve({
+  json: () => Promise.resolve({
+    dates: {
+      [todayDate]: {
+        countries: {
+          France: {
+            date: todayDate,
+            id: 'france',
+            name: 'France',
+            regions: [
+              {
                 date: todayDate,
-                id: 'france',
-                name: 'France',
-                regions: [
-                  {
-                    date: todayDate,
-                    id: 'martinique',
-                    name: 'Martinique',
-                    today_new_confirmed: 284,
-                    today_new_deaths: 0,
-                  },
-                ],
-                today_new_confirmed: 2356,
-                today_new_deaths: 33,
+                id: 'martinique',
+                name: 'Martinique',
+                today_new_confirmed: 284,
+                today_new_deaths: 0,
               },
-            },
-            info: {
-              date: `${todayDate} 00:00CEST`,
-            },
+            ],
+            today_new_confirmed: 2356,
+            today_new_deaths: 33,
           },
         },
-        metadata: {
-          by: 'Narrativa & AppliedXL',
+        info: {
+          date: `${todayDate} 00:00CEST`,
         },
-        total: {
-          name: 'Total',
-          today_new_confirmed: 676208,
-          today_new_deaths: 3621,
-        },
-        updated_at: `${todayDate} 12:36UTC`,
-      }),
-  });
+      },
+    },
+    metadata: {
+      by: 'Narrativa & AppliedXL',
+    },
+    total: {
+      name: 'Total',
+      today_new_confirmed: 676208,
+      today_new_deaths: 3621,
+    },
+    updated_at: `${todayDate} 12:36UTC`,
+  }),
+});
 
 const MockedApp = () => (
   <Provider store={store}>

@@ -22,37 +22,35 @@ export const fetchDataFailure = (err = '') => ({
 
 const todayDate = new Date().toISOString().split('T')[0];
 
-export const fetchAllData =
-  (date = todayDate) =>
-  (dispatch) => {
-    const API_URL = `https://api.covid19tracking.narrativa.com/api/${date}`;
-    dispatch(fetchDataRequest());
+export const fetchAllData = (date = todayDate) => (dispatch) => {
+  const API_URL = `https://api.covid19tracking.narrativa.com/api/${date}`;
+  dispatch(fetchDataRequest());
 
-    return fetch(API_URL)
-      .then((res) => res.json())
-      .then((res) => {
-        let data = [];
-        const countriesData = res.dates[date].countries;
+  return fetch(API_URL)
+    .then((res) => res.json())
+    .then((res) => {
+      let data = [];
+      const countriesData = res.dates[date].countries;
 
-        Object.keys(countriesData).forEach((country) => {
-          data.push({
-            id: countriesData[country].id,
-            name: countriesData[country].name,
-            stat: countriesData[country].today_new_confirmed,
-          });
+      Object.keys(countriesData).forEach((country) => {
+        data.push({
+          id: countriesData[country].id,
+          name: countriesData[country].name,
+          stat: countriesData[country].today_new_confirmed,
         });
-
-        // Only keep data from countries with stat
-        data = data.filter((d) => d.stat > 0);
-        // sort based on stat in reverse order
-        data = data.sort((a, b) => b.stat - a.stat);
-
-        dispatch(fetchDataSuccess(data));
-      })
-      .catch((err) => {
-        dispatch(fetchDataFailure(err));
       });
-  };
+
+      // Only keep data from countries with stat
+      data = data.filter((d) => d.stat > 0);
+      // sort based on stat in reverse order
+      data = data.sort((a, b) => b.stat - a.stat);
+
+      dispatch(fetchDataSuccess(data));
+    })
+    .catch((err) => {
+      dispatch(fetchDataFailure(err));
+    });
+};
 
 const initialState = {
   status: 'not fetched',
