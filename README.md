@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/SpaceTraveler-violet)
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Covid Stats
 
