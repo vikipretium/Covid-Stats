@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Header() {
   return (
-    <header className="bg-pink-500">
+    <header className="bg-pink-500 shadow-lg">
       <div className="container mx-auto flex justify-between items-center p-2">
         <Link to="/">
           <svg
