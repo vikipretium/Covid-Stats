@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer() {
   return (
-    <footer className="mt-8 py-6 px-4 flex place-content-center gap-5 border-t rounded-t-3xl border-t-pink-600 bg-pink-500">
+    <footer className="mt-8 py-6 px-4 flex place-content-center gap-5 border-t rounded-t-3xl border-t-blue-600 bg-blue-500">
       <a
         href="https://github.com/vikipretium/Covid-Stats"
         target="_blank"

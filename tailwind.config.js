@@ -6,7 +6,7 @@ module.exports = {
         sans: ['"Gill Sans"', 'sans-serif'],
       },
       colors: {
-        pink: {
+        blue: {
           400: '#5687e3',
           500: '#4369b2',
           600: '#3f62a4',

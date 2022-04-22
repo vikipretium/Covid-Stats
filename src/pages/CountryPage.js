@@ -53,7 +53,7 @@ function CountryPage() {
           </div>
         </div>
       </div>
-      <div className="bg-pink-500 grow rounded-3xl border border-pink-600 w-full max-w-2xl mx-auto">
+      <div className="bg-blue-500 grow rounded-3xl border border-blue-600 w-full max-w-2xl mx-auto">
         <div className="p-2 text-center uppercase font-bold">
           Region/State/City
         </div>

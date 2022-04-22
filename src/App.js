@@ -6,18 +6,18 @@ import CountryPage from './pages/CountryPage';
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col bg-pink-400 text-white">
+    <div className="min-h-screen flex flex-col bg-blue-400 text-white">
       <Header />
       <Routes>
         <Route path="/" element={<CountriesPage />} />
         <Route path="/countries/:countryName" element={<CountryPage />} />
         <Route
           path="*"
-          element={(
+          element={
             <main className="p-4 grow">
               <p>Not exist!</p>
             </main>
-          )}
+          }
         />
       </Routes>
       <Footer />

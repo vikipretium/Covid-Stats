@@ -3,7 +3,7 @@ import React from 'react';
 
 function RegionItem({ region }) {
   return (
-    <li className="flex items-center gap-3 px-2 py-4 odd:bg-pink-600 text-lg">
+    <li className="flex items-center gap-3 px-2 py-4 odd:bg-blue-600 text-lg">
       <p className="grow">{region.name}</p>
       <span>
         {region.stat}
