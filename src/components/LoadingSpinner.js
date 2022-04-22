@@ -1,4 +1,5 @@
 import React from 'react';
+import { PropTypes } from 'prop-types';
 
 const LoadingSpinner = ({ size = '' }) => {
   const sizeClasses = size.length ? size : 'w-6 h-6';
